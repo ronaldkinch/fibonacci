@@ -9,7 +9,6 @@ def fibonacci(count)
     (count - 1).times { sequence.push(sequence[-1] + sequence[-2]).shift }
   end
 
-  # p sequence
   sequence[-1]
 end
 
