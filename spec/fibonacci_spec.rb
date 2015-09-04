@@ -7,14 +7,18 @@ require "fibonacci.rb"
 
 describe "fibonacci" do
   it "has result for valid input" do
+
     assert_equal fibonacci(0), 0
     assert_equal fibonacci(1), 1
     assert_equal fibonacci(20), 6765
-    refute_equal fibonacci(200_000), 6765
+
+    refute_equal fibonacci(653_900), 6765
   end
 
   it "raises error for invalid input" do
+
     proc { fibonacci(-1) }.must_raise ArgumentError
     proc { fibonacci('a') }.must_raise ArgumentError
+
   end
 end

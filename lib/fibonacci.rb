@@ -6,7 +6,7 @@ def fibonacci(count)
   sequence = [0]
   unless count == 0
     sequence << 1
-    (count - 1).times { sequence << sequence[-1] + sequence[-2] }
+    (count - 1).times { sequence.push(sequence[-1] + sequence[-2]).shift }
   end
 
   # p sequence
